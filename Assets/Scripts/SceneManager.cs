@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class MenuManager : MonoBehaviour {
+public class SceneManager : MonoBehaviour {
 	public bool pauseWhenOptionIsOpen = true;
 	public bool loadOptionMenu = true;
 	public KeyCode keyCodeForOptionMenu = KeyCode.Escape;
