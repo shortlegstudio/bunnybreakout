@@ -24,6 +24,7 @@ public class SceneManager : MonoBehaviour {
 			Time.timeScale = oldTimeScale;
 		}
 		optionMenu.SetActive (false);
+		optionMenuVisible = false;
 	}
 
 	void Start() {
