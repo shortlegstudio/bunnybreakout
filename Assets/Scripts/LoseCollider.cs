@@ -2,7 +2,11 @@
 using System.Collections;
 
 public class LoseCollider : MonoBehaviour {
-	public SceneManager sceneManager;
+	private SceneManager sceneManager;
+
+	void Start() {
+		sceneManager = GameObject.FindObjectOfType<SceneManager> ();
+	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 		sceneManager.LoadLevel ("Lose");
