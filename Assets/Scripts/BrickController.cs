@@ -4,11 +4,13 @@ using System.Collections;
 public class BrickController : MonoBehaviour {
 	private static int breakableCount = 0;
 	public Sprite[] hitImages;
+	public AudioClip destroySound;
+	public float breakVolume;
 	private int timesHit;
 	private SpriteRenderer spriteRenderer;
 	private SceneManager sceneManager;
 	private bool isBreakable = true;
-
+	
 	public static int BreakableCount { 
 		get { return breakableCount; } 
 	}
@@ -27,11 +29,6 @@ public class BrickController : MonoBehaviour {
 			breakableCount++;
 		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	void OnCollisionEnter2D(Collision2D other) {
 		if (isBreakable) {
@@ -45,6 +42,7 @@ public class BrickController : MonoBehaviour {
 		if (timesHit >= maxHits) {
 			breakableCount--;
 			sceneManager.BrickDestroyed();
+			AudioSource.PlayClipAtPoint(destroySound, this.transform.position, breakVolume);
 			Destroy (this.gameObject);
 		}
 		else {

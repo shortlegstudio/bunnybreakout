@@ -2,16 +2,25 @@
 using System.Collections;
 
 public class BallController : MonoBehaviour {
+	public AudioClip boingSound;
+	public float boingVolume;
+	public float speed = 5.0f;
+
+	private float minYAngle = 0.3f;
 	private PaddleController paddle;
 	private Vector3 paddleToBallVector;
 	private Rigidbody2D rigidBody;
 	private bool attachedBall = true;
+
+	private Vector2 velocity; //Tracked for more interesting collisions
+	private Vector2 lastPos;
 
 	// Use this for initialization
 	void Start () {
 		paddle = GameObject.FindObjectOfType<PaddleController> ();
 		paddleToBallVector = transform.position - paddle.transform.position;
 		rigidBody = this.GetComponent<Rigidbody2D>();
+		lastPos = this.transform.position;
 	}
 	
 	// Update is called once per frame
@@ -20,9 +29,43 @@ public class BallController : MonoBehaviour {
 			this.transform.position = paddle.transform.position + paddleToBallVector;
 
 			if (Input.GetMouseButtonDown (0)) {
-				rigidBody.velocity = new Vector2 (2f, 10f);
+				//Get Random Up Angle
+				Vector2 launchAngle = new Vector2(Random.Range (-0.3f,0.3f), 1) * speed;
+				rigidBody.velocity = launchAngle;
 				attachedBall = false;
 			}
 		}
+	}
+
+	void FixedUpdate() {
+		// Get pos 2d of the ball.
+		Vector3 pos3D = transform.position;
+		Vector2 pos2D = new Vector2(pos3D.x, pos3D.y);
+		
+		// Velocity calculation. Will be used for the bounce
+		velocity = pos2D - lastPos;
+		lastPos = pos2D;
+	}
+
+	void OnCollisionEnter2D(Collision2D other) {
+		if (!attachedBall) {
+			AudioSource.PlayClipAtPoint(boingSound, this.transform.position, boingVolume);
+
+			// Normal
+			Vector3 N = other.contacts[0].normal;
+			
+			//Direction
+			Vector3 V = velocity.normalized;
+			
+			// Reflection
+			Vector3 R = Vector3.Reflect(V, N).normalized;
+			
+			
+			// Assign normalized reflection with the constant speed
+			rigidBody.velocity = new Vector2(R.x, R.y) * speed;
+		}
+
+
+
 	}
 }
