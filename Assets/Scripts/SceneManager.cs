@@ -28,4 +28,10 @@ public class SceneManager : MonoBehaviour {
 	public void LoadNextLevel() {
 		Application.LoadLevel (Application.loadedLevel + 1);
 	}
+
+
+	public void BrickDestroyed() {
+		if (BrickController.BreakableCount <= 0)
+			LoadNextLevel ();
+	}
 }

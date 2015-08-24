@@ -5,7 +5,7 @@
 # http://www.codeandweb.com/texturepacker/unity
 #
 # Sprite sheet: BunnyBreakoutBlocks.png (512 x 512)
-# $TexturePacker:SmartUpdate:718b47366853db6384f598dddfa76bae:1c998790a2d4974f5159845a50f6f571:bd69e10fd04de1063f8625b177948152$
+# $TexturePacker:SmartUpdate:0d525a2b605bcdc0429196326fc695b0:5e2459b959425c30af5a830564cb93d5:bd69e10fd04de1063f8625b177948152$
 #
 
 Giraffe Bricks Blue;2;469;128;41;0.5;0.5
@@ -24,19 +24,20 @@ Lair Bricks Green;2;297;128;41;0.5;0.5
 Lair Bricks Lilac;132;297;128;41;0.5;0.5
 Lair Bricks Raspberry;262;297;128;41;0.5;0.5
 Lair Bricks Red;2;254;128;41;0.5;0.5
-Zebra Bricks dark blue;2;211;128;41;0.5;0.5
-Zebra Bricks green;2;168;128;41;0.5;0.5
-Zebra Bricks neon green;2;125;128;41;0.5;0.5
-Zebra Bricks orange;2;82;128;41;0.5;0.5
-Zebra Bricks periwinkle blue;2;39;128;41;0.5;0.5
-Zebra Bricks purple;132;254;128;41;0.5;0.5
-Zebra Bricks raspberry;262;254;128;41;0.5;0.5
-Zebra Bricks red;132;211;128;41;0.5;0.5
-blue_purple bricks 1;262;211;128;41;0.5;0.5
-blue_purple bricks 2;132;168;128;41;0.5;0.5
-blue_purple bricks 3;262;168;128;41;0.5;0.5
-blue_purple bricks 4;132;125;128;41;0.5;0.5
-blue_purple bricks 5;132;82;128;41;0.5;0.5
-blue_purple bricks 6;132;39;128;41;0.5;0.5
-blue_purple bricks 7;262;125;128;41;0.5;0.5
-blue_purple bricks 8;262;82;128;41;0.5;0.5
+Unbreakable Brick;2;211;128;41;0.5;0.5
+Zebra Bricks dark blue;2;168;128;41;0.5;0.5
+Zebra Bricks green;2;125;128;41;0.5;0.5
+Zebra Bricks neon green;2;82;128;41;0.5;0.5
+Zebra Bricks orange;2;39;128;41;0.5;0.5
+Zebra Bricks periwinkle blue;132;254;128;41;0.5;0.5
+Zebra Bricks purple;262;254;128;41;0.5;0.5
+Zebra Bricks raspberry;132;211;128;41;0.5;0.5
+Zebra Bricks red;262;211;128;41;0.5;0.5
+blue_purple bricks 1;132;168;128;41;0.5;0.5
+blue_purple bricks 2;262;168;128;41;0.5;0.5
+blue_purple bricks 3;132;125;128;41;0.5;0.5
+blue_purple bricks 4;132;82;128;41;0.5;0.5
+blue_purple bricks 5;132;39;128;41;0.5;0.5
+blue_purple bricks 6;262;125;128;41;0.5;0.5
+blue_purple bricks 7;262;82;128;41;0.5;0.5
+blue_purple bricks 8;262;39;128;41;0.5;0.5

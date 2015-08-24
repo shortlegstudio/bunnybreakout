@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8e779407909594f6385f5abc9ed3460b
-timeCreated: 1440377207
+timeCreated: 1440379635
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -22,20 +22,21 @@ TextureImporter:
     21300030: Lair_5
     21300032: Zebra_1
     21300034: Zebra_2
-    21300036: Zebra_3
+    21300036: Unbreakable
     21300038: Zebra_4
-    21300040: Block_1
+    21300040: Zebra_3
     21300042: Zebra_5
-    21300044: Block_2
-    21300046: Block_3
+    21300044: Block_1
+    21300046: Block_2
     21300048: Zebra_6
-    21300050: Block_4
-    21300052: Block_5
+    21300050: Block_3
+    21300052: Block_4
     21300054: Zebra_7
-    21300056: Block_6
-    21300058: Block_7
+    21300056: Block_5
+    21300058: Block_6
     21300060: ZEbra_8
-    21300062: Block_8
+    21300062: Block_7
+    21300064: Block_8
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -261,7 +262,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Zebra_3
+    - name: Unbreakable
       rect:
         serializedVersion: 2
         x: 2
@@ -281,7 +282,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Block_1
+    - name: Zebra_3
       rect:
         serializedVersion: 2
         x: 262
@@ -301,7 +302,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Block_2
+    - name: Block_1
       rect:
         serializedVersion: 2
         x: 132
@@ -311,7 +312,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Block_3
+    - name: Block_2
       rect:
         serializedVersion: 2
         x: 262
@@ -331,7 +332,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Block_4
+    - name: Block_3
       rect:
         serializedVersion: 2
         x: 132
@@ -341,7 +342,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Block_5
+    - name: Block_4
       rect:
         serializedVersion: 2
         x: 262
@@ -361,7 +362,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Block_6
+    - name: Block_5
       rect:
         serializedVersion: 2
         x: 132
@@ -371,10 +372,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Block_7
+    - name: Block_6
       rect:
         serializedVersion: 2
-        x: 262
+        x: 263
         y: 82
         width: 128
         height: 41
@@ -391,10 +392,20 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Block_8
+    - name: Block_7
       rect:
         serializedVersion: 2
         x: 132
+        y: 39
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Block_8
+      rect:
+        serializedVersion: 2
+        x: 262
         y: 39
         width: 128
         height: 41
