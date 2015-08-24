@@ -5,10 +5,6 @@ using System.Collections;
 public class SceneManager : MonoBehaviour {
 	private OptionMenuManager optionMenu;
 
-	public void LoadLevel(string levelName) {
-		Application.LoadLevel (levelName);
-	}
-
 	public void ExitGame() {
 		Application.Quit ();
 	}
@@ -25,13 +21,20 @@ public class SceneManager : MonoBehaviour {
 		}
 	}
 
-	public void LoadNextLevel() {
-		Application.LoadLevel (Application.loadedLevel + 1);
+	public void LoadLevel(string levelName) {
+		BrickController.ResetLevel ();
+		Application.LoadLevel (levelName);
 	}
 
 
+	public void LoadNextLevel() {
+		BrickController.ResetLevel ();
+		Application.LoadLevel (Application.loadedLevel + 1);
+	}
+		
+
 	public void BrickDestroyed() {
-		if (BrickController.BreakableCount <= 0)
+		if (BrickController.BreakableCount <= 0) 
 			LoadNextLevel ();
 	}
 }

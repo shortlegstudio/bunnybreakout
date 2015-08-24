@@ -29,4 +29,5 @@ public class PaddleController : MonoBehaviour {
 		Vector3 newPosition = new Vector3(ball.transform.position.x, transform.position.y, transform.position.z);
 		gameObject.transform.position = newPosition;
 	}
+	
 }

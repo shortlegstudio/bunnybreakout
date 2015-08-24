@@ -15,6 +15,10 @@ public class BrickController : MonoBehaviour {
 		get { return breakableCount; } 
 	}
 
+	public static void ResetLevel() {
+		breakableCount = 0;
+	}
+
 	// Use this for initialization
 	void Start () {
 		timesHit = 0;
@@ -58,7 +62,4 @@ public class BrickController : MonoBehaviour {
 		spriteRenderer.sprite = hitImages[spriteIndex];
 	}
 
-	void LevelCompleted() {
-		sceneManager.LoadNextLevel ();
-	}
 }
