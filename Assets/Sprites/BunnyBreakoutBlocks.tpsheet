@@ -1,0 +1,42 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: BunnyBreakoutBlocks.png (512 x 512)
+# $TexturePacker:SmartUpdate:718b47366853db6384f598dddfa76bae:1c998790a2d4974f5159845a50f6f571:bd69e10fd04de1063f8625b177948152$
+#
+
+Giraffe Bricks Blue;2;469;128;41;0.5;0.5
+Giraffe Bricks Dark Blue;132;469;128;41;0.5;0.5
+Giraffe Bricks Fuchsia;262;469;128;41;0.5;0.5
+Giraffe Bricks Green;2;426;128;41;0.5;0.5
+Giraffe Bricks Neon Green;132;426;128;41;0.5;0.5
+Giraffe Bricks Orange;262;426;128;41;0.5;0.5
+Giraffe Bricks Purple;2;383;128;41;0.5;0.5
+Giraffe Bricks Yellow;132;383;128;41;0.5;0.5
+Hard Brick 1;262;383;128;41;0.5;0.5
+Hard Brick 2;2;340;128;41;0.5;0.5
+Hard Brick 3;132;340;128;41;0.5;0.5
+Lair Bricks Dark Blue;262;340;128;41;0.5;0.5
+Lair Bricks Green;2;297;128;41;0.5;0.5
+Lair Bricks Lilac;132;297;128;41;0.5;0.5
+Lair Bricks Raspberry;262;297;128;41;0.5;0.5
+Lair Bricks Red;2;254;128;41;0.5;0.5
+Zebra Bricks dark blue;2;211;128;41;0.5;0.5
+Zebra Bricks green;2;168;128;41;0.5;0.5
+Zebra Bricks neon green;2;125;128;41;0.5;0.5
+Zebra Bricks orange;2;82;128;41;0.5;0.5
+Zebra Bricks periwinkle blue;2;39;128;41;0.5;0.5
+Zebra Bricks purple;132;254;128;41;0.5;0.5
+Zebra Bricks raspberry;262;254;128;41;0.5;0.5
+Zebra Bricks red;132;211;128;41;0.5;0.5
+blue_purple bricks 1;262;211;128;41;0.5;0.5
+blue_purple bricks 2;132;168;128;41;0.5;0.5
+blue_purple bricks 3;262;168;128;41;0.5;0.5
+blue_purple bricks 4;132;125;128;41;0.5;0.5
+blue_purple bricks 5;132;82;128;41;0.5;0.5
+blue_purple bricks 6;132;39;128;41;0.5;0.5
+blue_purple bricks 7;262;125;128;41;0.5;0.5
+blue_purple bricks 8;262;82;128;41;0.5;0.5

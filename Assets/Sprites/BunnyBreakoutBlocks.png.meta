@@ -1,0 +1,407 @@
+fileFormatVersion: 2
+guid: 8e779407909594f6385f5abc9ed3460b
+timeCreated: 1440377207
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Giraffe_1
+    21300002: Giraffe_2
+    21300004: Giraffe_3
+    21300006: Giraffe_4
+    21300008: Giraffe_5
+    21300010: Giraffe_6
+    21300012: Giraffe_7
+    21300014: Giraffe_8
+    21300016: HardHit_0
+    21300018: HardHit_1
+    21300020: HardHit_2
+    21300022: Lair_1
+    21300024: Lair_2
+    21300026: Lair_3
+    21300028: Lair_4
+    21300030: Lair_5
+    21300032: Zebra_1
+    21300034: Zebra_2
+    21300036: Zebra_3
+    21300038: Zebra_4
+    21300040: Block_1
+    21300042: Zebra_5
+    21300044: Block_2
+    21300046: Block_3
+    21300048: Zebra_6
+    21300050: Block_4
+    21300052: Block_5
+    21300054: Zebra_7
+    21300056: Block_6
+    21300058: Block_7
+    21300060: ZEbra_8
+    21300062: Block_8
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 128
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Giraffe_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 469
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Giraffe_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 469
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Giraffe_3
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 469
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Giraffe_4
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 426
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Giraffe_5
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 426
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Giraffe_6
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 426
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Giraffe_7
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 383
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Giraffe_8
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 383
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HardHit_0
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 383
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HardHit_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 340
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HardHit_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 340
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Lair_1
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 340
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Lair_2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 297
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Lair_3
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 297
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Lair_4
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 297
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Lair_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 254
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zebra_1
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 254
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zebra_2
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 254
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zebra_3
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 211
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zebra_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 211
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Block_1
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 211
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zebra_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 168
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Block_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 168
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Block_3
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 168
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zebra_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 125
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Block_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 125
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Block_5
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 125
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zebra_7
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 82
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Block_6
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 82
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Block_7
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 82
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ZEbra_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 39
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Block_8
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 39
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
