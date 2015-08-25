@@ -6,7 +6,6 @@ public class BallController : MonoBehaviour {
 	public float boingVolume;
 	public float speed = 5.0f;
 
-	private float minYAngle = 0.3f;
 	private PaddleController paddle;
 	private Vector3 paddleToBallVector;
 	private Rigidbody2D rigidBody;

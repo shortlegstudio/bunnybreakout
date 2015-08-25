@@ -3,9 +3,12 @@ using System.Collections;
 
 public class BrickController : MonoBehaviour {
 	private static int breakableCount = 0;
+
 	public Sprite[] hitImages;
 	public AudioClip destroySound;
 	public float breakVolume;
+	public GameObject explosion;
+	
 	private int timesHit;
 	private SpriteRenderer spriteRenderer;
 	private SceneManager sceneManager;
@@ -47,6 +50,7 @@ public class BrickController : MonoBehaviour {
 			breakableCount--;
 			sceneManager.BrickDestroyed();
 			AudioSource.PlayClipAtPoint(destroySound, this.transform.position, breakVolume);
+			Instantiate(explosion, new Vector3(transform.position.x, transform.position.y, transform.position.z - 1), Quaternion.identity);
 			Destroy (this.gameObject);
 		}
 		else {
