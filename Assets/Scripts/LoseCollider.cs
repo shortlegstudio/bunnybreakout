@@ -9,6 +9,13 @@ public class LoseCollider : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		sceneManager.LoadLevel ("Lose");
+		if (other.CompareTag ("Ball")) {
+			//If it's a ball, let's lose a life or end the game
+			sceneManager.LoadLevel ("Lose");
+		} else {
+			//Otherwise, just kill off that object since it's no longer valuable.
+			Destroy (other.gameObject);
+		}
+
 	}
 }

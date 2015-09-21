@@ -38,7 +38,7 @@ public class BrickController : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D other) {
-		if (isBreakable) {
+		if (isBreakable && other.gameObject.CompareTag("Ball")) {
 			handleHits ();
 		}
 	}
