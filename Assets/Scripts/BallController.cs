@@ -7,6 +7,7 @@ public class BallController : MonoBehaviour {
 	public float speed = 5.0f;
 
 	private PaddleController paddle;
+	private GameObject spawnPoint;
 	private Vector3 paddleToBallVector;
 	private Rigidbody2D rigidBody;
 	private bool attachedBall = true;
@@ -16,16 +17,17 @@ public class BallController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		paddle = GameObject.FindObjectOfType<PaddleController> ();
-		paddleToBallVector = transform.position - paddle.transform.position;
+		spawnPoint = GameObject.FindWithTag ("ballSpawn");
+		paddleToBallVector = transform.position - spawnPoint.transform.position;
+		attachBall ();
 		rigidBody = this.GetComponent<Rigidbody2D>();
 		lastPos = this.transform.position;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if (attachedBall) {
-			this.transform.position = paddle.transform.position + paddleToBallVector;
+			this.transform.position = spawnPoint.transform.position + paddleToBallVector;
 
 			if (Input.GetMouseButtonDown (0)) {
 				//Get Random Up Angle
@@ -63,8 +65,9 @@ public class BallController : MonoBehaviour {
 			// Assign normalized reflection with the constant speed
 			rigidBody.velocity = new Vector2(R.x, R.y) * speed;
 		}
+	}
 
-
-
+	public void attachBall() {
+		attachedBall = true;
 	}
 }

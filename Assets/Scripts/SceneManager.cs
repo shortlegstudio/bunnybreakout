@@ -11,6 +11,9 @@ public class SceneManager : MonoBehaviour {
 
 	void Start() {
 		optionMenu = FindObjectOfType<OptionMenuManager> ();
+		GameController gc = FindObjectOfType<GameController> ();
+		if (gc)
+			gc.UpdateUI ();
 	}
 	
 	void Update() {
@@ -37,4 +40,5 @@ public class SceneManager : MonoBehaviour {
 		if (BrickController.BreakableCount <= 0) 
 			LoadNextLevel ();
 	}
+	
 }

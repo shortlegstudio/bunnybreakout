@@ -29,5 +29,25 @@ public class PaddleController : MonoBehaviour {
 		Vector3 newPosition = new Vector3(ball.transform.position.x, transform.position.y, transform.position.z);
 		gameObject.transform.position = newPosition;
 	}
+
+	void OnCollisionEnter2D(Collision2D other) {
+		switch (other.gameObject.tag) {
+		case "Bunny":
+			catchBunny (other.gameObject);
+			break;
+		case "Ball":
+			spinBall(other.contacts[0].point, other.gameObject);
+			break;
+		}
+		
+	}
+
+	private void catchBunny(GameObject go) {
+		Destroy (go);
+	}
+	
+	private void spinBall(Vector2 touchPoint, GameObject go) {
+
+	}
 	
 }
