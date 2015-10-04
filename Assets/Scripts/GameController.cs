@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class GameController : MonoBehaviour {
-	public static GameObject _instance;
+	private static GameObject _instance;
 	private int _lives;
 	private int _bunniesSaved;
 
@@ -13,6 +13,10 @@ public class GameController : MonoBehaviour {
 
 	public int BunniesSaved {
 		get { return _bunniesSaved; }
+	}
+
+	public static GameController Current {
+		get { return _instance.GetComponent<GameController>(); }
 	}
 
 	// Use this for initialization
@@ -47,7 +51,13 @@ public class GameController : MonoBehaviour {
 		_lives = 3;
 	}
 
+	public void CatchBunny() {
+		_bunniesSaved++;
+		UpdateUI ();
+	}
+
 	public void UpdateUI() {
+		Debug.LogFormat ("Updating UI: {0}, {1}", _lives, _bunniesSaved);
 		GameObject ui = GameObject.FindWithTag ("livesCounter");
 		if (ui != null) {
 			Text lifeCounter = ui.GetComponent<Text> ();

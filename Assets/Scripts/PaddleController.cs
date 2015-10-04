@@ -5,9 +5,11 @@ public class PaddleController : MonoBehaviour {
 	int gameUnitX = 16;
 	public bool autoPlay = false;
 	private BallController ball;
+	private GameController gameController;
 
 	void Start() {
 		ball = GameObject.FindObjectOfType<BallController> ();
+		gameController = GameObject.FindObjectOfType<GameController> ();
 	}
 
 	void Update () {
@@ -35,19 +37,14 @@ public class PaddleController : MonoBehaviour {
 		case "Bunny":
 			catchBunny (other.gameObject);
 			break;
-		case "Ball":
-			spinBall(other.contacts[0].point, other.gameObject);
-			break;
+		
 		}
 		
 	}
 
 	private void catchBunny(GameObject go) {
+		gameController.CatchBunny ();
 		Destroy (go);
 	}
-	
-	private void spinBall(Vector2 touchPoint, GameObject go) {
 
-	}
-	
 }

@@ -11,9 +11,7 @@ public class SceneManager : MonoBehaviour {
 
 	void Start() {
 		optionMenu = FindObjectOfType<OptionMenuManager> ();
-		GameController gc = FindObjectOfType<GameController> ();
-		if (gc)
-			gc.UpdateUI ();
+		GameController.Current.UpdateUI ();
 	}
 	
 	void Update() {
