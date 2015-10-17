@@ -11,6 +11,7 @@ public class SceneManager : MonoBehaviour {
 
 	void Start() {
 		optionMenu = FindObjectOfType<OptionMenuManager> ();
+		GameController.Current.Reset ();
 		GameController.Current.UpdateUI ();
 	}
 	
