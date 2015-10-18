@@ -5,7 +5,7 @@ public class LoseCollider : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		switch (other.tag) {
 		case "Ball":
-			GameController.Current.LoseLife ();
+			GameController.Current.BallOutOfBounds(other.gameObject);
 			break;
 		case "Bunny":
 			GameController.Current.MissedBunny(other.gameObject);

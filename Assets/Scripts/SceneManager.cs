@@ -11,7 +11,6 @@ public class SceneManager : MonoBehaviour {
 
 	void Start() {
 		optionMenu = FindObjectOfType<OptionMenuManager> ();
-		GameController.Current.Reset ();
 		GameController.Current.UpdateUI ();
 	}
 	
@@ -23,7 +22,13 @@ public class SceneManager : MonoBehaviour {
 		}
 	}
 
+	public void StartGame() {
+		GameController.Current.Reset ();
+		LoadLevel ("Level01");
+	}
+
 	public void LoadLevel(string levelName) {
+		Debug.Log ("Load Level");
 		BrickController.ResetLevel ();
 		Application.LoadLevel (levelName);
 	}

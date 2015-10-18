@@ -5,6 +5,11 @@ using System.Collections;
 public class GameController : MonoBehaviour {
 	public GameObject successExclam;
 	public GameObject ohnoExclam;
+	public GameObject multiball;
+
+	public AudioClip caughtBunnySound;
+	public AudioClip lostBunnySound;
+	public AudioClip lostLifeSound;
 
 	private static GameObject _instance;
 	private int _lives;
@@ -37,11 +42,13 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {	
-	
+
 	}
 
 	public void LoseLife() {
 		_lives--;
+
+
 		if (Lives < 0) {
 			findSceneManager ().LoadLevel ("Lose");
 			return;
@@ -51,7 +58,18 @@ public class GameController : MonoBehaviour {
 		ResetBall ();
 	}
 
+	public void BallOutOfBounds(GameObject ball) {
+		//If it's the last ball reset, otherwise just get rid of it
+		if (OnlyBall ()) {
+			AudioSource.PlayClipAtPoint (lostLifeSound, ball.transform.position);
+			LoseLife ();
+		} else {
+			Destroy (ball);
+		}
+	}
+
 	public void Reset() {
+		Debug.Log ("Resetting Stats");
 		_bunniesSaved = 0;
 		_lives = 3;
 	}
@@ -59,13 +77,17 @@ public class GameController : MonoBehaviour {
 	public void CatchBunny(GameObject bunny) {
 		_bunniesSaved++;
 		showExclam (bunny.transform.position, successExclam);
+		AudioSource.PlayClipAtPoint (caughtBunnySound, bunny.transform.position);
 
+		LaunchMultiBall (bunny.transform.position);
 		Destroy (bunny);
 		UpdateUI ();
 	}
 
 	public void MissedBunny(GameObject bunny) {
 		showExclam (bunny.transform.position + Vector3.up, ohnoExclam);
+		AudioSource.PlayClipAtPoint (lostBunnySound, bunny.transform.position);
+
 		Destroy (bunny);
 	}
 
@@ -102,5 +124,15 @@ public class GameController : MonoBehaviour {
 		}
 		GameObject obj = (GameObject)Instantiate (exclam, pos, Quaternion.identity);
 		Destroy (obj, 1);
+	}
+
+	private bool OnlyBall() {
+		return GameObject.FindGameObjectsWithTag ("Ball").Length == 1;
+	}
+
+	private void LaunchMultiBall(Vector3 pos) {
+		GameObject newBall = (GameObject)Instantiate (multiball, pos, Quaternion.identity);
+		BallController bc = newBall.GetComponent<BallController> ();
+		bc.LaunchImmediately = true;
 	}
 }

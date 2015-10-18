@@ -5,11 +5,9 @@ public class PaddleController : MonoBehaviour {
 	int gameUnitX = 16;
 	public bool autoPlay = false;
 	private BallController ball;
-	private GameController gameController;
 
 	void Start() {
 		ball = GameObject.FindObjectOfType<BallController> ();
-		gameController = GameObject.FindObjectOfType<GameController> ();
 	}
 
 	void Update () {
@@ -35,7 +33,7 @@ public class PaddleController : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D other) {
 		switch (other.gameObject.tag) {
 		case "Bunny":
-			gameController.CatchBunny (other.gameObject);
+			GameController.Current.CatchBunny (other.gameObject);
 			break;
 		}	
 	}
