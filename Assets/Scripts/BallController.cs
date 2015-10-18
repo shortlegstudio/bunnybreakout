@@ -60,7 +60,16 @@ public class BallController : MonoBehaviour {
 			
 			// Reflection
 			Vector3 R = Vector3.Reflect(V, N).normalized;
-			
+
+			if (other.gameObject.CompareTag("Paddle")) {
+				//Do a little magic if you are hitting on the edge
+				Debug.LogFormat("Reflection First: {0}", R);
+				float xOffset = other.contacts[0].point.x - other.gameObject.transform.position.x;
+				R.x += xOffset;
+				R.Normalize();
+
+				Debug.LogFormat ("Reflection After: {0}", R);
+			}
 			
 			// Assign normalized reflection with the constant speed
 			rigidBody.velocity = new Vector2(R.x, R.y) * speed;

@@ -50,7 +50,8 @@ public class BrickController : MonoBehaviour {
 			breakableCount--;
 			sceneManager.BrickDestroyed();
 			AudioSource.PlayClipAtPoint(destroySound, this.transform.position, breakVolume);
-			Instantiate(explosion, new Vector3(transform.position.x, transform.position.y, transform.position.z - 1), Quaternion.identity);
+			GameObject exp = (GameObject)Instantiate(explosion, new Vector3(transform.position.x, transform.position.y, transform.position.z - 1), Quaternion.identity);
+			Destroy (exp, 2);
 			Destroy (this.gameObject);
 		}
 		else {
