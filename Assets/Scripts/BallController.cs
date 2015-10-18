@@ -63,14 +63,12 @@ public class BallController : MonoBehaviour {
 
 			if (other.gameObject.CompareTag("Paddle")) {
 				//Do a little magic if you are hitting on the edge
-				Debug.LogFormat("Reflection First: {0}", R);
+				// We want the ball to get a little extra X push depending on how far to the side it impacted the paddle
 				float xOffset = other.contacts[0].point.x - other.gameObject.transform.position.x;
-				R.x += xOffset;
+				R.x += xOffset / 2;
 				R.Normalize();
+			} 
 
-				Debug.LogFormat ("Reflection After: {0}", R);
-			}
-			
 			// Assign normalized reflection with the constant speed
 			rigidBody.velocity = new Vector2(R.x, R.y) * speed;
 		}

@@ -35,16 +35,8 @@ public class PaddleController : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D other) {
 		switch (other.gameObject.tag) {
 		case "Bunny":
-			catchBunny (other.gameObject);
+			gameController.CatchBunny (other.gameObject);
 			break;
-		
-		}
-		
+		}	
 	}
-
-	private void catchBunny(GameObject go) {
-		gameController.CatchBunny ();
-		Destroy (go);
-	}
-
 }

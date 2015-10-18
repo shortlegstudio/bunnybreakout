@@ -3,6 +3,9 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class GameController : MonoBehaviour {
+	public GameObject successExclam;
+	public GameObject ohnoExclam;
+
 	private static GameObject _instance;
 	private int _lives;
 	private int _bunniesSaved;
@@ -28,6 +31,8 @@ public class GameController : MonoBehaviour {
 		} else {
 			Destroy (this.gameObject);
 		}
+
+
 	}
 	
 	// Update is called once per frame
@@ -51,9 +56,17 @@ public class GameController : MonoBehaviour {
 		_lives = 3;
 	}
 
-	public void CatchBunny() {
+	public void CatchBunny(GameObject bunny) {
 		_bunniesSaved++;
+		showExclam (bunny.transform.position, successExclam);
+
+		Destroy (bunny);
 		UpdateUI ();
+	}
+
+	public void MissedBunny(GameObject bunny) {
+		showExclam (bunny.transform.position + Vector3.up, ohnoExclam);
+		Destroy (bunny);
 	}
 
 	public void UpdateUI() {
@@ -80,5 +93,14 @@ public class GameController : MonoBehaviour {
 	private void ResetBall() {
 		BallController ball = GameObject.FindObjectOfType<BallController> ();
 		ball.attachBall ();
+	}
+
+	private void showExclam(Vector3 pos, GameObject exclam) {
+		if (exclam == null) {
+			Debug.LogError ("Can't find Exclam!");
+			return;
+		}
+		GameObject obj = (GameObject)Instantiate (exclam, pos, Quaternion.identity);
+		Destroy (obj, 1);
 	}
 }
