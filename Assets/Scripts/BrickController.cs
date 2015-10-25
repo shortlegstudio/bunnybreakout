@@ -8,6 +8,8 @@ public class BrickController : MonoBehaviour {
 	public AudioClip destroySound;
 	public float breakVolume;
 	public GameObject explosion;
+	public float spawnBonusChance = 0.15f;
+	public GameObject bonus;
 	
 	private int timesHit;
 	private SpriteRenderer spriteRenderer;
@@ -21,6 +23,18 @@ public class BrickController : MonoBehaviour {
 	public static void ResetLevel() {
 		breakableCount = 0;
 	}
+
+	public static GameObject[] GetBricks() {
+		return GameObject.FindGameObjectsWithTag ("Breakable");
+	}
+
+	public static void HitBrick(GameObject brick) {
+		if (brick.CompareTag ("Breakable")) {
+			BrickController bc = brick.GetComponent<BrickController>();
+			bc.handleHits();
+		}
+	}
+
 
 	// Use this for initialization
 	void Start () {
@@ -43,7 +57,7 @@ public class BrickController : MonoBehaviour {
 		}
 	}
 
-	void handleHits() {
+	public void handleHits() {
 		timesHit ++;
 		int maxHits = hitImages.Length + 1;
 		if (timesHit >= maxHits) {
@@ -51,8 +65,9 @@ public class BrickController : MonoBehaviour {
 			sceneManager.BrickDestroyed();
 			AudioSource.PlayClipAtPoint(destroySound, this.transform.position, breakVolume);
 			GameObject exp = (GameObject)Instantiate(explosion, new Vector3(transform.position.x, transform.position.y, transform.position.z - 1), Quaternion.identity);
-			Destroy (exp, 2);
+			Destroy (exp, 2); // Make sure to destroy explosion after it's run for a bit
 			Destroy (this.gameObject);
+			SpawnBonus();
 		}
 		else {
 			setImage();
@@ -67,4 +82,10 @@ public class BrickController : MonoBehaviour {
 		spriteRenderer.sprite = hitImages[spriteIndex];
 	}
 
+	void SpawnBonus() {
+		if (Random.value < spawnBonusChance) {
+			Instantiate(bonus, this.transform.position, Quaternion.identity);
+		}
+	}
+	
 }
