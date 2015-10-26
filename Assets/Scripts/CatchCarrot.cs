@@ -34,12 +34,12 @@ public class CatchCarrot : MonoBehaviour {
 						}
 					}
 				}
-
-				foreach (GameObject b in hitBricks) {
-					BrickController.HitBrick (b);
-				}
 			}
 
+			//Destroy some Bricks!
+			foreach (GameObject b in hitBricks) {
+				BrickController.HitBrick (b);
+			}
 			//Remove the carrot
 			Destroy (this.gameObject);
 		}

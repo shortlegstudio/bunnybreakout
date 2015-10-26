@@ -80,6 +80,7 @@ public class GameController : MonoBehaviour {
 		AudioSource.PlayClipAtPoint (caughtBunnySound, bunny.transform.position);
 
 		LaunchMultiBall (bunny.transform.position);
+		LaunchMultiBall (bunny.transform.position);
 		Destroy (bunny);
 		UpdateUI ();
 	}

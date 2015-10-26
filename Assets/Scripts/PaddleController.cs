@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PaddleController : MonoBehaviour {
-	int gameUnitX = 16;
+	int gameUnitX = 10;
 	public bool autoPlay = false;
 	private BallController ball;
 
@@ -21,7 +21,7 @@ public class PaddleController : MonoBehaviour {
 
 	void MoveWithMouse() {
 		float mousePosInUnits = Input.mousePosition.x / Screen.width * gameUnitX;
-		mousePosInUnits = Mathf.Clamp (mousePosInUnits, 0.5f, 15.5f);
+		mousePosInUnits = Mathf.Clamp (mousePosInUnits, 0.5f, 9.5f);
 		gameObject.transform.position = new Vector3 (mousePosInUnits, transform.position.y, transform.position.z);
 	}
 

@@ -2,13 +2,16 @@
 using System.Collections;
 
 public class BrickController : MonoBehaviour {
+	private const float BONUS_INC_CHANCE = 0.025f;
+	private const float BASE_BONUS_CHANCE = 0.1f;
+	private static float spawnBonusChance = BASE_BONUS_CHANCE;
+
 	private static int breakableCount = 0;
 
 	public Sprite[] hitImages;
 	public AudioClip destroySound;
 	public float breakVolume;
 	public GameObject explosion;
-	public float spawnBonusChance = 0.15f;
 	public GameObject bonus;
 	
 	private int timesHit;
@@ -85,7 +88,12 @@ public class BrickController : MonoBehaviour {
 	void SpawnBonus() {
 		if (Random.value < spawnBonusChance) {
 			Instantiate(bonus, this.transform.position, Quaternion.identity);
+			spawnBonusChance = BASE_BONUS_CHANCE;
+		} else {
+			//Increase chance slightly so that it will force a carrot in a timely fashion
+			spawnBonusChance += BONUS_INC_CHANCE;
 		}
+		Debug.LogFormat ("Spawn Bonus Chance: {0}", spawnBonusChance);
 	}
 	
 }

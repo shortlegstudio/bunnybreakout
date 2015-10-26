@@ -5,6 +5,7 @@ public class BallController : MonoBehaviour {
 	public AudioClip boingSound;
 	public float boingVolume;
 	public float speed = 5.0f;
+	public float speedVariation = 1.0f;
 	public float minY = 0.2f;
 	public bool LaunchImmediately;
 
@@ -18,14 +19,19 @@ public class BallController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Debug.LogFormat ("Ball Speed: {0}", speed);
 		spawnPoint = GameObject.FindWithTag ("ballSpawn");
 		attachBall ();
 		rigidBody = this.GetComponent<Rigidbody2D>();
 		lastPos = this.transform.position;
 
 		if (LaunchImmediately) {
+			//Vary the speed slightly for multiballs
+			speed += Random.Range (-speedVariation, speedVariation);
 			LaunchBall();
 		}
+
+
 	}
 
 	// Update is called once per frame
