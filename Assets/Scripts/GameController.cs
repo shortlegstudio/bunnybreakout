@@ -79,8 +79,9 @@ public class GameController : MonoBehaviour {
 		showExclam (bunny.transform.position, successExclam);
 		AudioSource.PlayClipAtPoint (caughtBunnySound, bunny.transform.position);
 
-		LaunchMultiBall (bunny.transform.position);
-		LaunchMultiBall (bunny.transform.position);
+		//That's lazy... Launch two
+		LaunchMultiBall ();
+		LaunchMultiBall ();
 		Destroy (bunny);
 		UpdateUI ();
 	}
@@ -131,8 +132,9 @@ public class GameController : MonoBehaviour {
 		return GameObject.FindGameObjectsWithTag ("Ball").Length == 1;
 	}
 
-	private void LaunchMultiBall(Vector3 pos) {
-		GameObject newBall = (GameObject)Instantiate (multiball, pos, Quaternion.identity);
+	private void LaunchMultiBall() {
+		GameObject spawnPoint = GameObject.FindGameObjectWithTag ("ballSpawn");
+		GameObject newBall = (GameObject)Instantiate (multiball, spawnPoint.transform.position, Quaternion.identity);
 		BallController bc = newBall.GetComponent<BallController> ();
 		bc.LaunchImmediately = true;
 	}
